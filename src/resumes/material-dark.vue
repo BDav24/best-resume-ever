@@ -4,8 +4,8 @@
     <div class="shadow"></div>
     <div class="heading" id="myselfpic">
     </div>
-    <div class="section-headline">
-      {{ lang.contact }}
+    <div class="name">
+      <h2>{{person.name.first}} {{person.name.middle}} {{person.name.last}}</h2>
     </div>
     <div class="item">
       <div class="icon">
@@ -13,7 +13,7 @@
       </div>
       <div class="text">
         <ul>
-          <li> {{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</li>
+          <li>{{person.age}}</li>
         </ul>
       </div>
     </div>
@@ -77,7 +77,7 @@
 
     <div class="item last">
       <div class="section-headline">
-        {{ lang.skills }}
+        {{lang.skills}}
       </div>
       <div class="skill" v-for="skill in person.skills" :key="skill.name">
         <div class="right">
@@ -89,25 +89,27 @@
           </div>
         </div>
       </div>
+      <div class="skill">
+        <div class="right">
+          <span>{{person.knowledge}}</span>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="rightCol">
     <div class="title">
-      <h2>{{person.name.first}} {{person.name.middle}} {{person.name.last}}</h2>
-      <div>{{person.position}}</div>
+      <h2>{{person.position}}</h2>
     </div>
 
-    <div class="section-headline">{{ lang.experience }}</div>
+    <div class="section-headline">{{lang.experience}}</div>
     <div class="block" v-for="experience in person.experience" :key="experience.company">
       <div class="block-helper"></div>
       <h3 class="headline">{{experience.position}} - {{experience.company}}</h3>
         <div class="subheadline">{{experience.timeperiod}}</div>
-        <p class="info">
-          {{experience.description}}
-        </p>
+        <p class="info" v-html="experience.description"></p>
     </div>
-    <div class="section-headline">{{ lang.education }}</div>
+    <div class="section-headline">{{lang.education}}</div>
     <div class="block" v-for="education in person.education" :key="education.degree">
       <div class="block-helper"></div>
       <div class="headline">{{education.degree}}</div>
@@ -123,7 +125,7 @@
 
 <script>
 import Vue from 'vue';
-import { getVueOptions } from './options';
+import {getVueOptions} from './options';
 let name = 'material-dark';
 
 export default Vue.component(name, getVueOptions(name));
@@ -148,21 +150,21 @@ a {
 .title {
   right:25px;
   padding-left:20px;
-  padding-top:20px;
+  padding-top:10px;
   bottom:25px;
   h2 {
     text-transform:uppercase;
     display:block;
     font-size:1.17em;
     -webkit-margin-before:1em;
-    -webkit-margin-after:1em;
+    -webkit-margin-after:0;
     -webkit-margin-start:0;
     -webkit-margin-end:0;
     color:white;
     color:rgba(0,0,0,0.7);
     padding-top:0;
     margin-top:0;
-    letter-spacing:10px;
+    letter-spacing:5px;
     font-weight:400;
   }
   div {
@@ -196,9 +198,22 @@ a {
   font-size:10pt;
   opacity:0.8;
   margin-left:20px;
-  margin-top:40px;
-  margin-bottom:20px;
+  margin-top:20px;
+  margin-bottom:5px;
   color:#3f3d3c;
+}
+.name {
+  text-transform:uppercase;
+  font-weight:normal;
+  letter-spacing:3px;
+  opacity:0.8;
+  margin-left:20px;
+  margin-top:12px;
+  margin-bottom:17px;
+  color:#3f3d3c;
+  h2 {
+    font-size:15pt;
+  }
 }
 .c {
   clear:both;
@@ -241,7 +256,6 @@ h1, h3, h5, h6 {
 h2 {
   font-weight:400;
   font-weight:500;
-  margin:0;
   margin:0;
   font-size:22pt;
   line-height:37pt;
@@ -342,7 +356,7 @@ h4 {
   background-color:#16151c;
   overflow:hidden;
   display:block;
-  .section-headline {
+  .section-headline, .name {
     color:rgba(255,255,255,0.54);
   }
   a {
@@ -374,7 +388,7 @@ h4 {
       float:right;
       width:69%;
       padding-right:10%;
-      padding-top:0;
+      padding-top:4px;
       display:block;
       font-size:15px;
       font-weight:300;
@@ -431,6 +445,9 @@ h4 {
           }
         }
       }
+    }
+    .skill:last-child {
+      padding: 15px 10px 0;
     }
   }
   .item.last .text {

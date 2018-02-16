@@ -1,70 +1,71 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
+  first: David
   middle:
-  last: Doe
+  last: Brown
 about: Hi, my name is John Doe. I"m just about the most boring type of person you could
        possibly imagine. I like collecting leaves from the tree in my back yard and documenting
        each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+position: Ingénieur Full-stack (9 ans)
 
-birth:
-  year: 1990
-  location: New York
+age: 31 ans
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
+- company: Devanco
+  position: Développeur Full-stack / Lead
+  timeperiod: 7 ans / depuis 2011
+  description: "Freelance à mon compte en mission chez différents clients : OuiCar, Airbus, Devatics, RocketLinks,
+    Melty Group.<br><br>
+    Contributeur open source : https://github.com/notifme.<br>
+    Projets internes : https://nbox.notif.me / bot de trading de crypto-assets."
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
+- company: OuiCar (Freelance)
+  position: Développeur Full-stack, Lead Front
+  timeperiod: 5 ans / 2012 - 2017
+  description: "Architecture, Backend (PHP Zend, Node.js), Frontend (React), DevOps (Docker, Jenkins).<br>
+    Globalement j'ai construit 30% de la plateforme, qui gère aujourd’hui des centaines de milliers de réservations par an.<br><br>
+    Ce que j'ai appris :
+    <ul>
+      <li>Intégration API externes (emails, SMS, pushs, paiements, helpdesk).</li>
+      <li>Gestion de l'état (d'une réservation) et des processus dans un système complexe.</li>
+      <li>Recherche / Indexation (des voitures).</li>
+      <li>Gestion de la dette technique / KISS.</li>
+      <li>Spécificités du monde des startup (GTD, priorisation de ce qui a le plus de valeur pour la croissance, gestion des pics passages TV).</li>
+    </ul>"
 
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company: Sopra-Steria
+  position: R&D / Développement / Responsable technique
+  timeperiod: 2009 - 2011
+  description: Java J2EE / Géomatique (PostGis, OpenLayers, GeoTools, Mapserver).
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
+- degree: Ingénieur en Informatique et Mathématiques appliquées
+  timeperiod: 2006 - 2009
+  description: ENSEEIHT, Toulouse
 
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: Prépa CPGE
+  timeperiod: 2004 - 2006
+  description: Grenoble
 
 # skill level goes 0 to 100
 skills:
-- name: HTML5
+- name: Adaptabilité, Réflexion, Autonomie
   level: 99
-- name: CSS3
-  level: 95
-- name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
+- name: Backend (Node.js, PHP)
+  level: 90
+- name: Frontend (ES6, React, jQuery)
+  level: 90
+- name: DevOps (Docker, CI)
   level: 80
-- name: ES.Next
-  level: 70
-- name: Docker
-  level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+
+knowledge: Babel, Webpack, Jest, Next, Flowtype, Ubuntu, Atom, git...
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: david@devanco.com
+  phone: 06 63 94 24 29
+  street: Toulouse / Télétravail
+  # website: johndoe.com
+  github: BDav24
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
-lang: en
+lang: fr
 `
