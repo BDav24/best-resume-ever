@@ -1,0 +1,66 @@
+/* #*/ export const PERSON = `
+name:
+  first: David
+  middle:
+  last: Brown
+position: Senior Full-Stack Web Engineer
+
+age: 31 yo / 9 years xp
+
+experience:
+- company: Devanco
+  position: Lead / Full-Stack Developer
+  timeperiod: 7 years / since 2011
+  description: "Freelancing for different clients: OuiCar, Airbus, Devatics, RocketLinks, Melty Group.<br><br>
+    Open source contributor: https://github.com/notifme.<br>
+    Internal projets: https://nbox.notif.me / crypto-asset trading bot."
+
+- company: OuiCar (Freelance)
+  position: Full-Stack Developer, Lead Front
+  timeperiod: (5 years) / 2012 - 2017
+  description: "Architecture, Backend (PHP Zend, Node.js), Frontend (React), DevOps (Docker, Jenkins).<br>
+    I globally built 30% of the platform, which now handles hundreds of thousands of bookings.
+    Here is what I've learned:
+    <ul>
+      <li>Integration of external APIs (emails, SMS, payments, helpdesk...)</li>
+      <li>State management (of the bookings) and processus handling in a complex system.</li>
+      <li>Search / Indexation (of the cars).</li>
+      <li>Technical debt management / KISS / YAGNI.</li>
+      <li>Startup world specifics (GTD, prioritize tasks with the greatest value for growth, handling TV appearance peaks...)</li>
+    </ul>"
+
+- company: Sopra-Steria
+  position: R&D / Developer / Lead developer
+  timeperiod: 2 years / 2009 - 2011
+  description: Java J2EE / Geomatics (PostGis, OpenLayers, GeoTools, Mapserver).
+
+education:
+- degree: Computer Sciences and Applied Mathematics Engineer
+  timeperiod: 2006 - 2009
+  description: ENSEEIHT, Toulouse, France
+
+- degree: Higher School Preparatory Classes
+  timeperiod: 2004 - 2006
+  description: Grenoble, France
+
+# skill level goes 0 to 100
+skills:
+- name: Adaptability, Reflexion, Self-driven
+  level: 99
+- name: Backend (Node.js, PHP)
+  level: 90
+- name: Frontend (ES6, React, jQuery)
+  level: 90
+- name: DevOps (Docker, CI)
+  level: 80
+
+knowledge: Babel, Webpack, Jest, Next, Flowtype, Ubuntu, Atom, git...
+
+contact:
+  email: david@devanco.com
+  phone: (+33)6 63 94 24 29
+  street: Remote / Toulouse, France
+  github: BDav24
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
+lang: en
+`
